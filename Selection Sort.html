@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selection Sort</title>
+</head>
+<body>
+    
+    <div class="console"></div>
+
+    <script>
+        var arr = [6, 1, 7, 8, 9, 3, 5, 4, 2];
+
+        for(var i = 0; i < arr.length - 1; i++)
+        {   
+            var small = arr[i];
+            var index = i;
+            for(var j = i+1; j < arr.length; j++)
+            {
+                if(arr[j] < small)
+                {
+                    small = arr[j];
+                    index = j;
+                }
+            }
+            var tmp = arr[i];
+            arr[i] = small;
+            arr[index] = tmp;
+        }
+
+        for(i = 0; i < arr.length; i++)
+        document.querySelector('.console').innerHTML += arr[i];
+    </script>
+
+</body>
+</html>

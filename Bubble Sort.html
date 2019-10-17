@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubble Sort</title>
+</head>
+
+<body>
+
+    <div class="console"></div>
+
+    <script>
+        var arr = [5, 9, 3, 1, 2, 8, 4, 7, 6];
+
+        for (var i = arr.length - 1; i >= 0; i--)
+        {
+            for(var k = i - 1; k >= arr.length - i; k--)
+            {
+                if(arr[j] > arr[i])
+                {
+                    var tmp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = tmp;
+                }
+            }
+        }
+
+        for (i = 0; i < arr.length; i++)
+        document.querySelector('.console').innerHTML += arr[i];
+
+    </script>
+
+</body>
+
+</html>
